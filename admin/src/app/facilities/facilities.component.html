@@ -1,0 +1,143 @@
+<!-- Content Header (Page header) -->
+<div class="content-header" style="font-family: 'Times New Roman'">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6" style="display: -webkit-box">
+        <h1 class="m-0 text-dark">Manage Facilities</h1>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" class="btn btn-success"  data-toggle="modal" data-toggle="modal" data-target="#myModal">
+          <i class="nav-icon fa fa-plus">
+            &nbsp;&nbsp;
+          </i>Add New Facilities</button>
+
+      </div><!-- /.col -->
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+          <li class="breadcrumb-rooms"><a href="#">Home</a></li>
+          <li class="breadcrumb-rooms active">/ Manage Facilities</li>
+        </ol>
+      </div><!-- /.col -->
+    </div><!-- /.row -->
+  </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+
+<!-- Main content -->
+<section class="content" style="font-family: 'Times New Roman'">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+
+        <div class="card card-primary">
+          <div class="card-header">
+            <h3 class="card-title">Rooms Facilities</h3>
+
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body">
+            <form #frmrooms="ngForm" name="myForm">
+            <div class="row">
+              <p class="row" style="display: -webkit-box" >
+                <label for="RoomID">Room ID</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <input style="width: 70%" name="RoomID" id="RoomID" type="number" [(ngModel)]="selectedrooms.id"
+                      (input)="searchRoom()" class="form-control"><span ng-show="myForm.qty.$error.qty"></span>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                <input style="width: 70%" disabled type="text" name="RoomName" id="RoomName" class="form-control" [(ngModel)]="selectedrooms.name">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                <!--<input type="text" name="RoomType" id="RoomType" class="form-control">-->
+              </p>
+            </div>
+            <p class="form-group">
+              <label for="RoomTypeTxt">Room Type</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+              <input name="RoomTypeTxt" id="RoomTypeTxt" type="text" disabled
+                     class="form-control" [(ngModel)]="selectedrooms.type">
+            </p>
+            <p class="form-group">
+              <label for="priceTxt">Original Price</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+              <input name="priceTxt" id="priceTxt" type="number"
+                     class="form-control" [(ngModel)]="selectedrooms.price">
+            </p>
+            <table style="text-align: center">
+              <tr>
+                <th>Room Features</th>
+                <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                <th>Select Facility</th>
+                <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                <th>Calculate Price</th>
+
+              </tr>
+              <tr><br></tr>
+              <tr *ngFor="let facility of facilityList">
+                <td>{{facility.name}}</td>
+                <td>&nbsp;</td>
+                <td>
+                  <label class="radio">
+                  <input type="checkbox" name="options" id="option2" autocomplete="off" (change)="selectRoom(facility,$event)"/>
+                  <span class="checkround"></span>
+                  </label>
+                </td>
+                 <td>&nbsp;</td>
+                <td>{{facility.price}}</td>
+                <br><br>
+              </tr><br>
+
+
+              <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+
+                <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+
+                <td><button type="button" class="btn btn-danger" > Clear Fields</button></td>
+                <td>&nbsp;</td>
+                <td><button type="submit" (click)="saveRoomFacilities()" class="btn btn-success" > Attach Facilities </button></td>
+              </tr><br>
+            </table>
+            </form>
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <table id="tblrooms" class="table table-bordered table-hover">
+          <thead>
+          <tr style="background-color: #007bff;text-align: center;color: white">
+            <th>Room ID</th>
+            <th>Room Type</th>
+            <th>Room Title</th>
+            <th>Description</th>
+            <!--<th></th>-->
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let rooms of rooms " (click)="selectrooms(rooms)">
+            <td>{{rooms.code}}</td>
+            <td>{{rooms.discription}}</td>
+            <td>{{rooms.unicPrice}}</td>
+            <td>{{rooms.qtyOnHand}}</td>
+
+            <td>
+              <i (click)="deleterooms(rooms.code)" class="fa fa-trash fa-2x"></i>
+            </td>
+          </tr>
+          </tbody>
+          <tfoot>
+          <tr>
+            <td colspan="4">
+              <pagination-controls (pageChange)="p = $event"></pagination-controls>
+            </td>
+          </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </div><!-- /.container-fluid -->
+</section>
+
+<app-facpopup></app-facpopup>

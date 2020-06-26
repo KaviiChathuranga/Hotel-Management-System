@@ -1,0 +1,144 @@
+#frameModalTop1{
+  margin-right: 60%;
+  //transition: 1s;
+}
+@charset "UTF-8";
+body {
+  background-color: #f6f6f6;
+}
+
+h1 {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  text-align: center;
+}
+
+#title {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#circle {
+  display: block;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background-color: white;
+  border-radius: 150px;
+  box-shadow: 0px 1px 2px rgba(206, 206, 206, 0.8);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#circle h2 {
+  line-height: 0;
+  font-size: 11pt;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  display: inline-block;
+  color: #464646;
+}
+#circle p {
+  width: 225px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 7px;
+  font-size: 9pt;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+#circle-image {
+  height: 150px;
+  width: 300px;
+  background-color: black;
+  border-radius: 150px 150px 0 0;
+  background-size: 300px;
+  background-position: top;
+}
+
+#user {
+  width: 55px;
+  height: 55px;
+  border-radius: 27.5px;
+  background: green;
+  background-size: 80px;
+  background-position: bottom;
+  position: absolute;
+  margin-top: 112.5px;
+  margin-left: 225px;
+  border: 2px white solid;
+}
+
+#rating {
+  unicode-bidi: bidi-override;
+  direction: ltr;
+  text-align: center;
+}
+#rating span {
+  font-size: 20pt;
+  display: inline-block;
+  position: relative;
+  width: 1.2em;
+  color: #ffa742;
+}
+
+#heart {
+  unicode-bidi: bidi-override;
+  direction: ltr;
+  text-align: center;
+  margin-top: 10px;
+  cursor: pointer;
+}
+#heart span {
+  color: #ff4040;
+  font-size: 13pt;
+  display: inline-block;
+  position: relative;
+}
+#heart span:nth-child(2) {
+  font-family: sans-serif;
+}
+
+#heart span:nth-child(1):hover:before {
+  content: "♥︎";
+  font-size: 17pt;
+  color: #ff4040;
+  position: absolute;
+}
+
+.arrow {
+  width: 30px;
+  x: 0px;
+  y: 0px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 5%;
+  margin-right: 5%;
+  z-index: 100;
+}
+.arrow path {
+  fill: #464646;
+}
+.arrow:hover {
+  cursor: pointer;
+}
+
+#left-control {
+  float: left;
+}
+
+#right-control {
+  float: right;
+  right: 0;
+  margin-left: 5%;
+  margin-right: 5%;
+}

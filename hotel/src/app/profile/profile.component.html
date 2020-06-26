@@ -1,0 +1,41 @@
+<!--<button type="button" mdbBtn color="default" rounded="true" data-toggle="modal" data-target="#basicExample" (click)="frame.show()"-->
+<!--mdbWavesEffect>Launch Modal</button>-->
+
+<div style="z-index: 55555555555555555511" mdbModal #frame="mdbModal" class="modal fade right" id="frameModalTop5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-warning" role="document">
+    <!--Content-->
+    <div class="modal-content" style="font-family: 'Times New Roman';height: 18cm">
+      <!--Header-->
+      <!--<div class="modal-header">-->
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+      <!--</div>-->
+
+      <!--Body-->
+      <div class="modal-body">
+        <div class="window">
+          <div class="overlay"></div>
+          <div class="box header">
+            <img src="https://goo.gl/DM5s4f" alt="" />
+            <h2>Kavindu Chathuranga</h2>
+            <h4>Horana</h4>
+          </div>
+          <div class="box footer">
+            <ul>
+              <!--<li><a href=""><span class="ion-ios-camera-outline"></span> 401</a></li>-->
+              <!--<li><a href=""><span class="ion-ios-heart-outline"></span> 333K</a></li>-->
+              <!--<li><a href=""><span class="ion-ios-person-outline"></span> 225M</a></li>-->
+            </ul>
+            <a href="" class="btn">Edit Profile</a>
+            <a (click)="logOut();" class="btn">LogOut</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!--/.Content-->
+  </div>
+</div>

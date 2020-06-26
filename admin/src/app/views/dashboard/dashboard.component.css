@@ -1,0 +1,21 @@
+label,button,table{
+  font-family: "Times New Roman";
+}
+.card-body{
+  transition-duration: 5s;
+  font-family: "Times New Roman";
+}
+.card-title{
+  font-family: "Times New Roman";
+}
+h1{
+  font-family: "Times New Roman";
+}
+body{
+  transition-duration: 5s;
+  font-family: "Times New Roman";
+}
+.content{
+  transition-duration: 5s;
+  font-family: "Times New Roman";
+}

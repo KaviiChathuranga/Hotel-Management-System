@@ -1,0 +1,169 @@
+
+<mdb-carousel style="width: 100%;" id="caro" [isControls]="true" class="carousel slide" [animation]="'slide'">
+
+  <div><app-navbar></app-navbar></div>
+  <!--<div id="prog" style="margin-top: 77px;z-index: 555555555555;position: fixed" class="progress-wrap progress" data-progress-percent="100">-->
+    <!--<div class="progress-bar progress"></div>-->
+  <!--</div>-->
+  <div  id="chair" style="margin-top:15%; z-index: 1; margin-left:75%;position:absolute;font-family: 'Times New Roman'">
+    <a style="font-family: 'Times New Roman';text-align: center" href="http://www.ajerez.es/en/" target="_blank" class="contact-button">
+      Contact Us
+      <svg class="icon icon-paperplane"><use xlink:href="#icon-paperplane"></use></svg>
+      <span>K Kavindu Chathuranga</span>
+    </a>
+
+    <!--<button class="button1" data-toggle="modal" data-toggle="modal" data-target="#myModal"><i class="fa fa-heart"></i><span>Help </span></button>-->
+  </div>
+  <div   style="margin-top:20%; z-index: 1; margin-left:65%;position:absolute;font-family: 'Times New Roman'">
+    <a style="font-family: 'Times New Roman';text-align: center" class="contact-button2">
+    </a>
+
+    <!--<button class="button1" data-toggle="modal" data-toggle="modal" data-target="#myModal"><i class="fa fa-heart"></i><span>Help </span></button>-->
+  </div>
+  <div  style="margin-top:14%; z-index: 1; margin-left:18%;position:absolute;" class="card card-danger">
+    <div style="color: blue;font-family: 'Times New Roman' " class="card-header card bg-info">
+      <h3 class="card-title" style="text-align: center">Checking Information</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body" style="background: rgba(76, 175, 80, 0.1);">
+      <div class="md-form">
+        <form #frmDates="ngForm" name="frmDates">
+        <div class="row">&nbsp;&nbsp;&nbsp;
+          Choose Hotel &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <select style="width: 50%" class="form-control">
+            <option></option>
+          </select>
+        </div><br>
+        <div class="row">&nbsp;&nbsp;&nbsp;
+           Check In &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="date" [(ngModel)]="reserveRoom.checkInDate" id="datetimepicker1" name="datetimepicker1">
+        </div><br>
+        <div class="row">&nbsp;&nbsp;&nbsp;
+          Check Out &nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="date"  [(ngModel)]="reserveRoom.checkOutDate" name="datetimepicker2">
+        </div><br>
+
+        <button mdbBtn type="button" color="unique" class="waves-light"  (click)="searchReserveRoom(reserveRoom.checkInDate,reserveRoom.checkOutDate)"  mdbWavesEffect>Check Availability</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <!--First slide-->
+  <mdb-carousel-item>
+    <!--Mask color-->
+    <div class="view">
+
+      <!--Video source-->
+      <video class="video-fluid" autoplay loop>
+
+        <source  src="../../assets/Pexels%20Videos%204990.mp4" type="video/mp4" />
+
+      </video>
+      <div class="mask rgba-indigo-light waves-light" mdbWavesEffect>
+        <!--Navbar-->
+        <!--/.Navbar-->
+
+      </div>
+    </div>
+
+    <!--Caption-->
+    <div class="carousel-caption">
+      <div class="animated fadeInDownBig">
+        <h3 class="h3-responsive">Hotel Rest Rooms</h3>
+        <p>{{date}}</p>
+      </div>
+    </div>
+    <!--Caption-->
+  </mdb-carousel-item>
+  <!--/First slide-->
+  <!--Second slide-->
+  <mdb-carousel-item>
+    <!--Mask color-->
+    <div class="view">
+      <!--Video source-->
+      <video class="video-fluid" autoplay loop>
+        <source src="https://mdbootstrap.com/img/video/animation-intro.mp4" type="video/mp4" />
+      </video>
+      <div class="mask rgba-purple-slight waves-light" mdbWavesEffect></div>
+    </div>
+
+    <!--Caption-->
+    <div class="carousel-caption">
+      <div class="animated fadeInDown">
+        <h3 class="h3-responsive">Wonderful Nature Experience</h3>
+        <p>Hotel bookings are carried out quickly and simply at www.hrs.de: select your hotel and book your stay for the period you require. You will receive a booking confirmation each time you book at HRS' guaranteed consistently low prices. The benefit for you: you only pay when you start your trip. Your reservation will be held open until 6pm on the day of arrival.</p>
+      </div>
+    </div>
+    <!--Caption-->
+  </mdb-carousel-item>
+  <!--/Second slide-->
+  <!--Third slide-->
+  <mdb-carousel-item>
+    <!--Mask color-->
+    <div class="view">
+      <!--Video source-->
+      <video class="video-fluid" autoplay loop>
+        <source  src="../../assets/Pexels%20Videos%202957.mp4" type="video/mp4" />
+      </video>
+      <div class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
+    </div>
+
+    <!--Caption-->
+    <div class="carousel-caption">
+      <div class="animated fadeInDown">
+        <h3 class="h3-responsive">Best Hospitality</h3>
+        <p>Third text</p>
+      </div>
+    </div>
+    <!--Caption-->
+  </mdb-carousel-item>
+  <!--/Third slide-->
+</mdb-carousel><br>
+
+
+    <div class="row" style="width: 100%">
+      <div class="col-md-1"></div>
+      <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+      <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+      <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+      <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+      <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+
+
+      <div class="col-md-3">
+        <article class="one_third"><a href="#"><i  class="fa fa-globe"></i></a>
+          <h6 class="heading">Volutpat aliquam</h6>
+          <p>All over the world, there's growing </p>
+        </article></div>
+      <div class="col-md-3">  <article class="one_third"><a href="#"><i class="fa fa-tripadvisor"></i></a>
+        <h6 class="heading">Sagittis feugiat</h6>
+        <p>Cras felis ligula ultrices et od</p>
+      </article></div>
+      <div class="col-md-3"> <article class="one_third"><a href="#"><i class="fa fa-ge"></i></a>
+        <h6 class="heading">Ornare venenatis</h6>
+        <p> These educators share big ideas </p>
+      </article></div>
+
+    </div>
+
+
+<br><br><br><br>
+
+<div><app-cancel-reservation></app-cancel-reservation></div>
+<div><app-pricing></app-pricing></div>
+
+<form id="frmrooms">
+<div class="container" style="z-index: 2">
+  <router-outlet></router-outlet>
+  <!--<app-middle-container></app-middle-container>-->
+</div>
+</form>
+<div><app-pop-up></app-pop-up></div>
+<div><app-check-room></app-check-room></div>
+<!--<div><app-map></app-map></div>-->
+<!-- Footer -->
+<div>
+
+</div>

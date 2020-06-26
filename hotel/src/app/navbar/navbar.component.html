@@ -1,0 +1,70 @@
+<mdb-navbar style="background-color: #222222" SideClass="navbar navbar-expand-lg navbar-dark indigo">
+
+  <!-- Navbar brand -->
+  <mdb-navbar-brand><a class="navbar-brand" href="#">
+    <img src="../../assets/The-Busby-Rev-Logo.png" style="width: 50px;height: 50px">&nbsp;&nbsp;&nbsp;&nbsp;  </a></mdb-navbar-brand>
+
+  <!-- Collapsible content -->
+  <links>
+
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link waves-light" mdbWavesEffect >
+          <i class="fa fa-home"></i><br>Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item"  data-target="#basicExample">
+        <a class="nav-link waves-light" mdbWavesEffect >
+          <i class="fa fa-area-chart"></i><br>Features</a>
+      </li>
+      <li class="nav-item"  data-target="#frameModalTop1" rounded="true" data-toggle="modal" >
+        <a class="nav-link waves-light"  mdbWavesEffect>
+          <i class="fa fa-money"></i><br>Reviews</a>
+      </li>
+      <li class="nav-item"  data-target="#frameModalTop3" rounded="true" data-toggle="modal">
+        <!--data-target="#frameModalTop3" rounded="true" data-toggle="modal"-->
+        <a class="nav-link waves-light">
+          <i class="fa fa-map"></i><br>Map</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-light" mdbWavesEffect>
+          <i class="fa fa-telegram"></i><br>Contact Us</a>
+      </li>
+      <li class="nav-item" data-target="#frameModalTop" rounded="true" data-toggle="modal" >
+        <a class="nav-link waves-light" >
+          <i class="fa fa-close" ></i><br>Cancel Booking</a>
+      </li>
+
+      <!-- Dropdown -->
+      <li class="dropdown" dropdown>
+        <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+          <i class="fa fa-dropbox"></i><br> Basic dropdown<span class="caret"></span></a>
+        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+          <a class="dropdown-item waves-light" id="actionDown" mdbWavesEffect href="#">Action</a>
+          <a class="dropdown-item waves-light" id="anotherDown" mdbWavesEffect href="#">Another action</a>
+          <a class="dropdown-item waves-light" id="somethingDown" mdbWavesEffect href="#">Something else here</a>
+          <div class="divider dropdown-divider"></div>
+          <a class="dropdown-item waves-light" id="linkDown" mdbWavesEffect href="#">Separated link</a>
+        </div>
+      </li>
+
+    </ul>
+    <!-- Links -->
+
+    <!-- Search form -->
+    <form class="form-inline waves-light" mdbWavesEffect>
+      <div class="md-form mt-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+      </div>
+    </form>
+  </links>
+
+  <!-- Collapsible content -->
+
+</mdb-navbar>
+
+<div><app-cancel-reservation></app-cancel-reservation></div>
+<div><app-pricing></app-pricing></div>
+<div><app-map></app-map></div>
+
+

@@ -1,0 +1,45 @@
+<div style="z-index: 4545458888888788800;" mdbModal #frame="mdbModal" class="modal fade bottom" id="frameModalTop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-warning" role="document">
+    <!--Content-->
+    <div class="modal-content" style="font-family: 'Times New Roman'">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="heading lead">Cancel Reservation <b>?</b></p>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+        <div class="row">
+          <p style="margin-top: 10px">Reservation ID &nbsp;&nbsp;&nbsp;</p>
+          <input class="form-control" id="resID" name="resID" type="text" style="width: 25%;margin-top: 5px">&nbsp;
+          &nbsp; <button (click)="findRes()" class="btn btn-warning" style="height: 35px;color: black">Find Reservation</button>
+        </div>
+        <div class="row">
+          <p> Reserved Date </p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <label id="resDate" name="resDate">2018/09/29</label>
+        </div>
+        <div class="row">
+          <p> Reserved Room </p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <label id="resRoomName" name="resRoomName">Room Name</label>
+        </div>
+        <div class="row">
+          <p> CheckOut Date </p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <label id="checkOutDAte" name="checkOutDAte">2018/09/29</label>
+        </div>
+      </div>
+
+      <!--Footer-->
+      <div class="modal-footer justify-content-center">
+        <button type="button" mdbBtn color="warning" outline="true" class="waves-effect" mdbWavesEffect (click)="frame.hide()">No, thanks</button>
+        <a type="button" (click)="cancelRes()" mdbBtn color="danger" outline="true" class="waves-effect" mdbWavesEffect >Cancel Reservation</a>
+      </div>
+
+    </div>
+    <!--/.Content-->
+  </div>
+</div>

@@ -1,0 +1,12 @@
+[0913/202718.544:WARNING:minidump_to_upload_parameters.cc(66)] duplicate annotation name plat, discarding value Win64
+[0913/202718.641:WARNING:minidump_to_upload_parameters.cc(66)] duplicate annotation name prod, discarding value OperaDesktop
+[0913/202718.641:WARNING:minidump_to_upload_parameters.cc(66)] duplicate annotation name ver, discarding value 55.0.2994.56
+[0913/202718.641:WARNING:minidump_to_upload_parameters.cc(66)] duplicate annotation name channel, discarding value Stable
+[0913/202718.641:WARNING:minidump_to_upload_parameters.cc(66)] duplicate annotation name ptype, discarding value gpu-process
+[0913/202721.765:ERROR:http_transport_win.cc(273)] WinHttpSendRequest: The server name or address could not be resolved (0x2ee7)
+[0925/134733.650:WARNING:minidump_to_upload_parameters.cc(66)] duplicate annotation name plat, discarding value Win64
+[0925/134734.532:WARNING:minidump_to_upload_parameters.cc(66)] duplicate annotation name prod, discarding value OperaDesktop
+[0925/134734.532:WARNING:minidump_to_upload_parameters.cc(66)] duplicate annotation name ver, discarding value 55.0.2994.61
+[0925/134734.532:WARNING:minidump_to_upload_parameters.cc(66)] duplicate annotation name channel, discarding value Stable
+[0925/134734.532:WARNING:minidump_to_upload_parameters.cc(66)] duplicate annotation name ptype, discarding value gpu-process
+[0925/134735.759:ERROR:http_transport_win.cc(273)] WinHttpSendRequest: The server name or address could not be resolved (0x2ee7)

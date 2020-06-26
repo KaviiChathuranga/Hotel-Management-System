@@ -1,0 +1,30 @@
+.roww{
+  top: 0px;
+  height: 770px;
+}
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 5rem;
+  font-family: "Times New Roman";
+}
+button{
+  font-family: "Times New Roman";
+}
+
+.heading {
+  color: #eee;
+  font-size: 2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: black;
+  text-align: center;
+  font-family: "Times New Roman";
+  transition: 3s;
+}

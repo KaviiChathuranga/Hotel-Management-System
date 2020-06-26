@@ -1,0 +1,70 @@
+<div style="z-index: 4545458888888788800;width: 15cm" mdbModal #frame="mdbModal" class="modal fade left" id="frameModalTop4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-warning" role="document">
+    <!--Content-->
+    <div class="modal-content" style="font-family: 'Times New Roman'">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="heading lead">Checking Room <b>?</b></p>
+
+        <button routerLink="/middle" type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
+          <span aria-hidden="true"  class="white-text">&times;</span>
+        </button>
+      </div>
+
+      <!--Body-->
+
+      <div class="modal-body">
+
+        <div class="blog-card">
+  <div class="meta">
+    <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)"></div>
+    <ul class="details">
+
+    </ul>
+  </div>
+        </div>
+  <div class="description">
+    <h1 id="roomName" name="roomName">{{room.name}}</h1>
+    <h2 id="roomType" name="roomType">{{room.type}}</h2>
+    <p id="description" name="description"> {{room.description}}</p>
+    <p class="read-more">
+      <a href="#">Read More</a>
+    </p>
+  </div>
+
+<div class="blog-card alt">
+  <div class="meta">
+    <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-2.jpg)"></div>
+    <ul class="details">
+      <!--<li class="author"><a href="#">Jane Doe</a></li>-->
+      <!--<li class="date">July. 15, 2015</li>-->
+      <!--<li class="tags">-->
+        <!--<ul>-->
+          <!--<li><a href="#">Learn</a></li>-->
+          <!--<li><a href="#">Code</a></li>-->
+          <!--<li><a href="#">JavaScript</a></li>-->
+        <!--</ul>-->
+      <!--</li>-->
+    </ul>
+  </div>
+  <div class="description" style="font-family: 'Times New Roman'">
+    <h1>Room Facilities</h1>
+    <p id="f1" name="f1">p1</p>
+    <p id="f2" name="f2">p2</p>
+    <p id="f3" name="f3">p3</p>
+    <p id="f4" name="f4">p4</p>
+    <p id="f5" name="f5">p5</p>
+    <p class="read-more">
+      <a href="#">Read More</a>
+    </p>
+  </div>
+</div>
+      </div>
+    </div>
+
+      <div routerLink="/middle" class="modal-footer justify-content-center">
+        <a type="button" mdbBtn color="warning" outline="true" class="waves-effect" routerLink="/middle">No, thanks</a>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,62 @@
+<div class="roww" style="background-image: url('../../../assets/LRM_EXPORT_20181022_150854.jpg');background-repeat: no-repeat">
+  <div class="row">
+    <div class="col-md-8" style="margin-top: 180px;">
+      <div class="container">
+        <h1 class="heading" data-target-resolver></h1>
+      </div>
+    </div>
+    <div class="col-md-4"><div class="login-box" style="margin-top: 200px;position: absolute;background-position: unset">
+      <div class="login-logo">
+        <!--<a href="../../index2.html"><b>ThogaKade</b></a>-->
+      </div>
+      <!-- /.login-logo -->
+      <div class="card" style="background-color: transparent">
+        <div class="card-body login-card-body">
+          <p class="login-box-msg" style="font-family: 'Times New Roman'"><b>Sign in to start your session</b></p>
+
+          <form #frmLogin="ngForm" action="" method="post"
+                (ngSubmit)="login()">
+            <div class="form-group has-feedback"  style="font-family: 'Times New Roman';display: -webkit-box"><span class="fa fa-user form-control-feedback"></span>&nbsp;&nbsp;&nbsp;
+              <input [(ngModel)]="user.username" style="width: 85%" name="txtUserName" type="text" class="form-control" placeholder="Username">
+
+            </div>
+            <div class="form-group has-feedback" style="font-family: 'Times New Roman';display: -webkit-box"><span class="fa fa-lock form-control-feedback"></span>&nbsp;&nbsp;&nbsp;
+              <input [(ngModel)]="user.password" style="width: 85%" name="txtPassword" type="password" class="form-control" placeholder="Password">
+
+            </div>
+            <div class="row">
+              <!-- /.col -->
+              <div class="col-6" style="display: -webkit-box">
+                <button (click)="login()" type="button" class="btn btn-success btn-block btn-flat">
+                  <span class="fa fa-sign-in"></span>&nbsp;
+                  SignIn</button>
+              </div>
+              <div class="col-6" style="display: -webkit-box">
+                <!--<button type="button" class="btn btn-success btn-block btn-flat">SignIn</button>-->
+                <button type="button" class="btn btn-danger btn-block btn-flat">
+                  <span class="fa fa-google"></span>&nbsp;Google+</button>
+                <!--<button type="button" class="btn btn-primary btn-block btn-flat">FaceBook</button>-->
+              </div>
+              <!--<div class="col-4" style="display: -webkit-box">-->
+                <!--&lt;!&ndash;<button type="button" class="btn btn-success btn-block btn-flat">SignIn</button>&ndash;&gt;-->
+                <!--&lt;!&ndash;<button type="button" class="btn btn-danger btn-block btn-flat">Google+</button>&ndash;&gt;-->
+                <!--<button type="button" class="btn btn-primary btn-block btn-flat">-->
+                  <!--&lt;!&ndash;<span class="fa fa-facebook"></span>&nbsp;FaceBook</button>&ndash;&gt;-->
+              <!--</div>-->
+              <!-- /.col -->
+            </div>
+          </form>
+          <div *ngIf="failed" class="alert alert-danger alert-dismissible" style="margin-top:10px;">
+            <h6><i class="icon fa fa-ban"></i> Invalid Login Credentials !</h6>
+            Please enter valid login credentials to login
+          </div>
+        </div>
+        <!-- /.login-card-body -->
+      </div>
+    </div></div>
+    <!--<div class="col-md-4"></div>-->
+  </div>
+
+<!-- /.login-box -->
+</div>
+

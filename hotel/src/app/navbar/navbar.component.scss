@@ -1,0 +1,38 @@
+.nav-item{
+  transform: perspective(300px) rotateX(20deg);
+}
+.nav-item:hover{
+  transition: 2s;
+  background-color: blue;
+  transform: perspective(10000px) rotateX(0deg);
+}
+mdb-navbar{
+  font-family: "Times New Roman";
+  position: fixed  ;
+  width: 100%;
+  z-index: 20255555;
+  text-align: center;
+}
+.view{
+  height: 20cm;
+}
+#actionDown:hover{
+  transition: 2s;
+  background-color: lightskyblue;
+  color: white;
+}
+#anotherDown:hover{
+  transition: 2s;
+  background-color: lightskyblue;
+  color: white;
+}
+#somethingDown:hover{
+  transition: 2s;
+  background-color: lightskyblue;
+  color: white;
+}
+#linkDown:hover{
+  transition: 2s;
+  color: white;
+  background-color: lightskyblue;
+}

@@ -1,0 +1,142 @@
+<!-- Content Header (Page header) -->
+<div class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1 class="m-0 text-dark">Manage Rooms</h1>
+      </div><!-- /.col -->
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+          <li class="breadcrumb-rooms"><a href="#">Home</a></li>
+          <li class="breadcrumb-rooms active">/ Manage Rooms</li>
+        </ol>
+      </div><!-- /.col -->
+    </div><!-- /.row -->
+  </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+
+<!-- Main content -->
+<section class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+
+        <div class="card card-danger">
+          <div class="card-header">
+            <h3 class="card-title">Rooms Information</h3>
+
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body">
+            <div class="row">
+              <div class="col col-12">
+                <form #frmrooms="ngForm" name="myForm">
+                  <p class="form-group" style="display: -webkit-box">
+                    <label for="roomID">Room Code</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input disabled [disabled]="manuallySelected" name="roomID" [(ngModel)]="selectedrooms.id" id="roomID" style="width: 20%"
+                           value="{{roomCode}}"   class="form-control">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="text" class="form-control" name="roomSearchID" id="roomSearchID" style="width: 15%;" placeholder="input search key">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <button class="btn btn-warning" (click)="searchCustomer()">Find Room</button>
+                  </p>
+
+                  <p class="form-group">
+                    <label for="roomType">Room Type</label>
+                    <select class="form-control" id="roomType" name="roomType"  [(ngModel)]="selectedrooms.type">
+                      <option>Luxury Rooms</option>
+                      <option>Luxury Rooms</option>
+                      <option>Luxury Rooms</option>
+                    </select>
+                    <!--<input name="txtDiscription" [(ngModel)]="selectedrooms.discription" id="txtDiscription" class="form-control">-->
+                  </p>
+                  <p class="form-group">
+                    <label for="reserveType">Reserve Type</label>
+                    <select class="form-control" id="reserveType" name="reserveType"  [(ngModel)]="selectedrooms.reserveType" >
+                      <option>Family Room</option>
+                      <option>Couple Room</option>
+                      <!--<option>Luxury Rooms</option>-->
+                    </select>
+                    <!--<input name="txtDiscription" [(ngModel)]="selectedrooms.discription" id="txtDiscription" class="form-control">-->
+                  </p>
+
+                  <p class="form-group">
+                    <label for="roomTitleTxt">Room Title</label>
+                    <input [(ngModel)]="selectedrooms.name" id="roomTitleTxt" type="text" name="roomTitleTxt"
+                           class="form-control">
+                  </p>
+
+                  <p class="form-group">
+                    <label for="descriptionTxt">Description</label>
+                    <input [(ngModel)]="selectedrooms.description" name="qty" id="descriptionTxt" type="text"
+                           class="form-control">
+                  </p>
+                  <p class="form-group">
+                    <label for="manualPriceTxt">Manual Price</label>
+                    <input [(ngModel)]="selectedrooms.price" name="manualPriceTxt" id="manualPriceTxt" type="number"
+                           class="form-control">
+                  </p>
+                  <p class="form-group">
+                    <label for="manualPriceTxt">Select Image</label>
+                    <input name="fileTxt" id="fileTxt" type="file" (change)="onFile($event)"
+                           class="form-control">
+                  </p>
+                  <div>
+                    <button type="submit" (click)="saverooms()" class="btn btn-info">Save rooms</button>
+                    &nbsp;
+                    <button (click)="clear()" type="button" class="btn btn-danger ">Clear</button>
+                    &nbsp;
+                    <button (click)="update(selectedrooms.id)" type="button" class="btn btn-success">Update rooms</button>
+
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <table id="tblrooms" class="table table-bordered table-hover">
+          <thead>
+          <tr style="background-color: red;color: white">
+            <th>Room ID</th>
+            <th>Room Type</th>
+            <th>Reserve Type</th>
+            <th>Room Title</th>
+            <th>Description</th>
+            <th>Disable Room</th>
+            <!--<th></th>-->
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let rooms of roomList " (click)="selectrooms(rooms)">
+            <td>{{rooms.id}}</td>
+            <td>{{rooms.type}}</td>
+            <td>{{rooms.reserveType}}</td>
+            <td>{{rooms.name}}</td>
+            <td>{{rooms.description}}</td>
+
+            <td>
+              <i (click)="DesableRoom(rooms.id)" class="fa fa-remove fa-2x"></i>
+            </td>
+          </tr>
+          </tbody>
+          <tfoot>
+          <tr>
+            <td colspan="4">
+              <pagination-controls (pageChange)="p = $event"></pagination-controls>
+            </td>
+          </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </div><!-- /.container-fluid -->
+</section>
+

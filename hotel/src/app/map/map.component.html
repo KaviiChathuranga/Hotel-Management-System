@@ -1,0 +1,28 @@
+<!--<button type="button" mdbBtn color="default" rounded="true" data-toggle="modal" data-target="#basicExample" (click)="frame.show()"-->
+<!--mdbWavesEffect>Launch Modal</button>-->
+
+<div style="z-index: 55555555555555555511" mdbModal #frame="mdbModal" class="modal fade bottom" id="frameModalTop3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-warning" role="document">
+    <!--Content-->
+    <div class="modal-content" style="font-family: 'Times New Roman';margin-left: -40%;width: 25cm;height: 16cm">
+      <!--Header-->
+      <div class="modal-header">
+        <p class="heading lead">View Place {{routeID}}</p>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+        <agm-map [latitude]="latitude" [longitude]="longitude" style="height: 12cm">
+          <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+        </agm-map>
+      </div>
+
+    </div>
+    <!--/.Content-->
+  </div>
+</div>

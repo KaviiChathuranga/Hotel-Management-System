@@ -1,0 +1,187 @@
+<footer style="font-family: 'Times New Roman'" class="page-footer font-small stylish-color-dark pt-4">
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-4 mx-auto">
+
+        <!-- Content -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Hotel Content</h5>
+        <p>Are you looking for a hotel in Barcelona or Berlin?
+          Only guests who have booked via HRS and stayed in a particular hotel can submit an evaluation.
+          elit.</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+
+
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="../../hello">About Us</a>
+          </li>
+          <li>
+            <a href="#!">Privacy & Policies</a>
+          </li>
+
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <hr>
+
+  <!-- Call to action -->
+  <ul class="list-unstyled list-inline text-center py-2">
+    <li class="list-inline-item">
+      <h5 class="mb-1">Register for free</h5>
+    </li>
+    <li class="list-inline-item">
+      <button type="button" mdbBtn color="default" rounded="true" data-toggle="modal" data-target="#basicExample" (click)="frame.show()"
+              mdbWavesEffect>Sign Up!</button>
+    </li>
+    <li class="list-inline-item">
+      <button type="button" mdbBtn color="dark" rounded="true" data-toggle="modal" data-target="#frameModalTop5"
+              mdbWavesEffect><i class="fa fa-universal-access"></i>&nbsp;&nbsp; View Profile</button>
+    </li>
+  </ul>
+  <!-- Call to action -->
+
+  <hr>
+
+  <!-- Social buttons -->
+  <ul class="list-unstyled list-inline text-center">
+    <li class="list-inline-item">
+      <a class="btn-floating btn-fb mx-1" mdbWavesEffect>
+        <mdb-icon icon="facebook"></mdb-icon>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a class="btn-floating btn-tw mx-1" mdbWavesEffect>
+        <mdb-icon icon="twitter"></mdb-icon>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a class="btn-floating btn-gplus mx-1" mdbWavesEffect>
+        <mdb-icon icon="google-plus"></mdb-icon>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a class="btn-floating btn-li mx-1" mdbWavesEffect>
+        <mdb-icon icon="linkedin"></mdb-icon>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a class="btn-floating btn-dribbble mx-1" mdbWavesEffect>
+        <mdb-icon icon="dribbble"></mdb-icon>
+      </a>
+    </li>
+  </ul>
+  <!-- Social buttons -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2018 Shangri-La International Hotel Management Ltd. All Rights Reserved.
+
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+<div style="z-index: 55555555555555555511;font-family: 'Times New Roman'" mdbModal #frame="mdbModal" class="modal fade top" id="frameModalTop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-success" role="document" >
+    <!--Content-->
+    <div class="modal-content" style="width: 17cm">
+      <!--Header-->
+      <div class="modal-header" style="width: 100%; color: black">
+        <p class="heading lead" style="color: black;font-family: 'Times New Roman'">Registration</p>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+        <div id="login-box" style="font-family: 'Times New Roman'">
+          <div class="left" >
+            <form #myForm="ngForm" name="myForm">
+            <h1>Sign up</h1>
+
+            <input type="text" placeholder="Username" />
+              <p class="form-group">
+            <input type="text" name="username" id="username" [(ngModel)]="user.username" placeholder="E-mail" />
+              </p>
+              <p class="form-group">
+            <input type="password" name="password" id="password" [(ngModel)]="user.password" placeholder="Password" />
+              </p>
+            <input type="password" name="password2" id="password2" placeholder="Retype password" />
+
+            <input style="font-family: 'Times New Roman'" (click)="signClick(user)" type="button" name="signup_submit" value="Sign me up" />
+            </form>
+          </div>
+
+          <div class="right">
+            <span class="loginwith">Sign in with<br />social network</span>
+
+            <button style="font-family: 'Times New Roman'" class="social-signin facebook"> facebook</button>
+            <button style="font-family: 'Times New Roman'" class="social-signin twitter">  Twitter</button>
+            <button style="font-family: 'Times New Roman'" class="social-signin google"> Google+</button>
+          </div>
+          <div class="or">OR</div>
+        </div>
+      </div>
+      <!--</div>-->
+      <!--</div>-->
+
+      <!--Footer-->
+      <div class="modal-footer justify-content-center">
+
+        <!--<a type="button" mdbBtn color="success" outline="true" class="waves-effect" mdbWavesEffect (click)="frame.hide()">No, thanks</a>-->
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<app-profile></app-profile>
